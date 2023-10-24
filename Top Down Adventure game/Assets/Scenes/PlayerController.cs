@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0.5f;
     public bool hasApple = false;
 
-    public GameObject Apple;
+    public GameObject apple;
 
     public static PlayerController instance;
 
@@ -63,10 +63,10 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag.Equals("Apple"))
+        if (collision.gameObject.tag.Equals("apple"))
         {
             Debug.Log("obtained Apple");
-            Apple.SetActive(false);
+            apple.SetActive(false);
             hasApple= true;
         }
 
@@ -77,4 +77,4 @@ public class PlayerController : MonoBehaviour
         }
     }
 }
- 
+ ///start game screen and add dilogs after add code for 5 apples and drop them in chest to open door and sleep and end game
