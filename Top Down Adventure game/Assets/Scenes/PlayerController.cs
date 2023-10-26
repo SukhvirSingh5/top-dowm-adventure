@@ -67,13 +67,19 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("obtained Apple");
             apple.SetActive(false);
-            hasApple= true;
+            hasApple = true;
         }
 
         if (collision.gameObject.tag.Equals("exit"))
         {
             Debug.Log("Hit");
             SceneManager.LoadScene(0);
+        }
+        
+        if (collision.gameObject.tag.Equals("end") && hasKey == true)
+        {
+            Debug.Log("hit");
+            SceneManager.LoadScene(2);
         }
     }
 }
